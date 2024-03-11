@@ -1,0 +1,44 @@
+********************************************************************
+5. Setup Git Workspace on Windows
+
+rename files to start with a . (dot)
+git command:
+mv file_name .file_name
+
+********************************************************************
+8. Executing a First Commit
+
+git commands:
+mkdir - create a folder
+dir - display files/folders inside the current folder
+touch - create a file
+git init - initialize repository
+git add - add file to repository
+git commit -m "*insert commit message*" - commit file changes and 	add a message
+
+********************************************************************
+9. Understanding the full committing process
+git init -> git add -> git commit -m "*commit msg*" -> git push
+
+********************************************************************
+10. Reviewing File changes
+
+To compare versions of a file:
+git command:
+git diff <file name>
+
+********************************************************************
+12. Missing Git Configurations
+
+In order to push commits, you need to configure git.
+git commands:
+git config --list -> check existing git configuration
+git config --global user.name "*input user name*" -> set an user name
+git config --global user.email "*input email address*" -> set email address
+
+set default code editor+wait:
+git config --global core.editor "*editor name* --wait"
+--wait pauses git until you're finished with editing the file(adding commit msg); for future references
+https://stackoverflow.com/questions/68975299/why-should-i-use-wait-when-selecting-my-default-editor-in-git
+
+each commit has an identifier called a SHA or hash (commit ID is 40 hexadecimal chars that specify a 160-bit SHA-1 hash) 7 hexadeciamls characters long.

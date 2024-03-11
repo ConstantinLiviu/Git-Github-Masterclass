@@ -1,0 +1,33 @@
+********************************************************************
+14. Pushing your Local Repo to GitHub
+
+Add local repository to github repository:
+git command:
+git remote add origin <repository link/ssh> (add remote repository we're linking to; origin stands for the repo link)
+git push origin <branch name> (push to remote repository)
+
+********************************************************************
+16. Pulling from the remote
+
+Sync local repository to remote
+git command:
+git pull origin *(referring to repo link)* <branch name>
+
+tracking = local branch is going to be tracking a remote branch
+to set tracking, git command:
+git branch --set-upstream-to=origin/<remote repo branch name> (branch name referrs to the one on the remote repo; i.e. origin/master referrs to the entire path of the branch we want to track) <local branch> (name of the branchy that will track the remote branch)
+
+with tracking in place, we simplyfy the syncing repository
+git command: 
+git pull
+
+********************************************************************
+17. Check for changes with Git Status
+
+to check for updates, git command:
+git fetch -> creates a local copy of the remote repo that is not immediately availabe
+git status -> compares local repo to fetched copy, displaying differences, if any, between the two
+
+(git pull is two commands in one - it first fetches the repository and then it merges the files)
+
+git restore -> discard changes in working directory
