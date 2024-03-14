@@ -44,3 +44,27 @@ You will get a list of commits displaying: first 8 chars of the commit SHA, auth
 
 ********************************************************************
 23. Making Changes
+
+to skip adding and commiting:
+git commit -a -m <commit msg>
+
+********************************************************************
+24. Undoing Changes and Reverting commits
+
+To undo unstaged commits:
+git checkout -- <file name>
+
+To undo staged commits:
+git reset HEAD <file name>
+git chekcout -- <file name>
+
+Retrieve a previously working version after push:
+git log
+get the first eight characters of the desired rollback commit SHA
+git checkout <first eight chars of above mentioned SHA>
+
+Revert multiple files in the same folder:
+(git add . - add all changes in the directory)
+
+git reset HEAD . -> unstage all staged files
+git checkout -- . -> revert file changes
