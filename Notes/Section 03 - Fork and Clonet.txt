@@ -1,3 +1,46 @@
 ********************************************************************
 18. Intro to Forking Github Repositories
 
+Forks can only exist in the GitHub context/used on github repositories. Froking means cloning a repository. Once forked, it becomes its own entity and you only get commits until the point of forking. Any additional comits to the original repository won't be available for your copy/fork. All commits made on the copy/fork won't update on the original repo.
+
+********************************************************************
+19. Cloning a repository
+
+To clone a repository, using git bash, first switch to the folder you want to clone it in. 
+git commands:
+git clone <repo link>
+
+********************************************************************
+20. Exploring Git Logs
+
+Using git one may check a history log (commits, updates, changes) even on repositories that were forked;
+git command:
+git log
+
+Each log has a SHA, the author of the commit (name/email addy), the date and the commit message. Logs are ordered most recent -> oldest;
+
+Compare commit differences using SHAs:
+git diff <first 8 digits of the SHA of the first commit we want to compare> <first 8 digits of the SHA of the second commit we want to compare>
+
+********************************************************************
+21. Getting Commit and File details with Git
+
+To get additional info about commits:
+git show <first 8 digits of the SHA of the commit we're interested in>
+
+To check the latest commit one can use:
+git show HEAD
+
+And to check the third latest commit:
+git show HEAD~3
+
+In these cases HEAD works as a pointer (replaces SHAs) and it can also be used to compare commits:
+git show HEAD~1 HEAD~2
+
+To get more information on a particular file in the repo use:
+git annotate <file name>
+
+You will get a list of commits displaying: first 8 chars of the commit SHA, author, date/time, changes made on each line
+
+********************************************************************
+23. Making Changes
