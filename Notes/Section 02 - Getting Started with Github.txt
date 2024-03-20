@@ -17,6 +17,8 @@ tracking = local branch is going to be tracking a remote branch
 to set tracking, git command:
 git branch --set-upstream-to=origin/<remote repo branch name> (branch name referrs to the one on the remote repo; i.e. origin/master referrs to the entire path of the branch we want to track) <local branch> (name of the branchy that will track the remote branch)
 
+tracking v2: git push --set-upstream origin <branch name>
+
 with tracking in place, we simplyfy the syncing repository
 git command: 
 git pull

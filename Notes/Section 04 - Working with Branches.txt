@@ -3,3 +3,6 @@
 git command
 git branch <branch name>
 
+create/change branch:
+git checkout <branch name> -> change branches
+git checkout -b <branch name> -> create a branch and immediately switch to it
