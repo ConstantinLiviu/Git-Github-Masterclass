@@ -19,3 +19,12 @@ to add files/folders to the gitignore file simply type in the file/folder addres
 ********************************************************************
 30. Syncing branches
 
+push branches -> git push origin <branch name>
+
+git checkout --track origin/<branch name>
+1. create new local branch
+2. checking out into the local branch based on a remote branch
+3. track new branch
+
+********************************************************************
+31. Graph the Branches on the Terminal
