@@ -28,3 +28,15 @@ git checkout --track origin/<branch name>
 
 ********************************************************************
 31. Graph the Branches on the Terminal
+
+git log --graph -> offers a log with a visual aid which tracks branch merges/splits in hte commit history
+
+git log --oneline -n 1 <branch name> 
+check parent commit of a branch
+
+********************************************************************
+32. Merging Branches in the Terminal
+
+git commands:
+switch to parent branch
+git merge <branch you want to merge> <destination branch(parent branch)>

@@ -56,7 +56,10 @@ git checkout -- <file name>
 
 To undo staged commits:
 git reset HEAD <file name>
-git chekcout -- <file name>
+git checkout -- <file name>
+
+hard HEAD delete:
+git reset --hard HEAD^ // git reset --hard HEAD^~2 (2 commits previous to HEAD)
 
 Retrieve a previously working version after push:
 git log
