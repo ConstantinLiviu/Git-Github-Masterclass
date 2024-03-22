@@ -40,3 +40,6 @@ check parent commit of a branch
 git commands:
 switch to parent branch
 git merge <branch you want to merge> <destination branch(parent branch)>
+
+delete branch
+git branch -d <branch-name>
