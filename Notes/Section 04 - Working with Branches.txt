@@ -10,3 +10,12 @@ git checkout -b <branch name> -> create a branch and immediately switch to it
 ********************************************************************
 29. Adding a gitignore File
 used to ignore files in your repository; while those files exist locally and can be edited and saved, they will not be uploaded to a remote repository when pushing commits; they won't even be committed/added to your local repository
+
+to create a gitignore file, git command:
+touch ".gitignore"
+
+to add files/folders to the gitignore file simply type in the file/folder address
+
+********************************************************************
+30. Syncing branches
+
