@@ -6,3 +6,7 @@ git branch <branch name>
 create/change branch:
 git checkout <branch name> -> change branches
 git checkout -b <branch name> -> create a branch and immediately switch to it
+
+********************************************************************
+29. Adding a gitignore File
+used to ignore files in your repository; while those files exist locally and can be edited and saved, they will not be uploaded to a remote repository when pushing commits; they won't even be committed/added to your local repository
