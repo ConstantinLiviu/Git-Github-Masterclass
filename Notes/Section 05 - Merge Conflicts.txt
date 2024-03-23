@@ -41,3 +41,18 @@ VI. SUBTREE:
 
 ********************************************************************
 36. A first Merge Conflict
+
+when on master, you may write 
+git merge <branch name> 
+only; no need to specify destination
+
+how to abort merging 
+git merge --abort
+
+after solving the merge conflict
+git add <file name>
+git commit -m "<commit msg>"
+git branch -d <branch name>
+
+********************************************************************
+40. Adding Tags to the Repository
