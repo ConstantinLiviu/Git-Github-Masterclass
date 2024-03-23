@@ -56,3 +56,20 @@ git branch -d <branch name>
 
 ********************************************************************
 40. Adding Tags to the Repository
+ - tags are a reference that point to a specidic point in Git history;
+ - they usually point a marked version release (v1.0);
+ - unlike branches, upon creation, tags don't change and have no further history of commits; (like a branch that doesn't change)
+
+To add a tag:
+git tag -a <tag name> -m "<relevant tag message>"
+
+git show <tag name> -> displays tagger, date, tag message and commit linked to tag
+
+Tags can also be added retroactively:
+git log -> figure out which commit you want to add the tag to;
+git log --pretty=oneline (each commit is displayed on its own line);
+get the first 8 digits of the SHA
+git tag -a <tag name> <first 8 chars of SHA> -m "<relevant tag msg>"
+
+To push tags to remote:
+git push origin --tags
