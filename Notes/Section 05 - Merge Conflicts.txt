@@ -39,3 +39,5 @@ VI. SUBTREE:
 
  git merge -s subtree
 
+********************************************************************
+36. A first Merge Conflict
