@@ -1,0 +1,9 @@
+********************************************************************
+41. Collaboration on Private Repos and cloning to Colab
+
+To add collaborators on your repo, from repo page -> Settings -> collaborators -> add people
+
+********************************************************************
+42. Protecting Branches on GitHub
+
+To protect a branch on GitHub you need to go to Settings -> Branches -> Add branch protection rule -> select branch -> add rules
