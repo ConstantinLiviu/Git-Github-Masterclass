@@ -1,6 +1,15 @@
 ********************************************************************
 51. Introduction to Markdown
 
+You can format text:
+
+bold: Your **text** here!
+italic: Your _text_ here!
+headers: #Your text here!  ###Your text here!
+images: !(alt text)[image.jpg]
+task: - [x] Your text here!
+      - [] Your text here!
+
 ********************************************************************
 52. Formatting Text with Markdown
 
