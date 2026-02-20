@@ -13,17 +13,40 @@ task: - [x] Your text here!
 ********************************************************************
 52. Formatting Text with Markdown
 
+If you click a .md file header while in github preview, you'll notice the url change to redirect to the header in question
+
 ********************************************************************
 53. Creating Lists with Markdown
+
+All lesson info presented in ..\Git & Github Masterclass\Section 08 - Markdown\testFile.md
 
 ********************************************************************
 54. Adding Tables and Links with Markdown
 
+All lesson info presented in ..\Git & Github Masterclass\Section 08 - Markdown\testFile.md
+
 ********************************************************************
 55. Images and Videos using Markdown
+
+For videos you can use this:
+[![](*video thumbnail*)](*video link*)
+
+All lesson info presented in ..\Git & Github Masterclass\Section 08 - Markdown\testFile.md
 
 ********************************************************************
 56. Writing Code Blocks using Markdown
 
+To display code use ``````. The code goes between; in line with the first ``` write the name of the programming language used, like so:
+
+``` javascript
+*code snippet*
+```
+
+All lesson info presented in ..\Git & Github Masterclass\Section 08 - Markdown\testFile.md
+
 ********************************************************************
 57.The Notion App
+
+Notion can be used to create Markdown files and then updated to the repo
+
+********************************************************************
