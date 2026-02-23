@@ -1,0 +1,28 @@
+{
+  "name": "git-and-github-masterclass",
+  "version": "1.0.0",
+  "description": "\"Simple Celsius-Kelvin conversion calculator for a CI/CD excercise as part of section 11 of the course\"",
+  "type": "module",
+  "main": "Section 06 - Collaboration in Github/script.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node \"Section 06 - Collaboration in Github/logic.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConstantinLiviu/Git-Github-Masterclass.git"
+  },
+  "keywords": [
+    "javascript",
+    "circleci",
+    "tutorial"
+  ],
+  "author": "ConstantinLiviu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConstantinLiviu/Git-Github-Masterclass/issues"
+  },
+  "homepage": "https://github.com/ConstantinLiviu/Git-Github-Masterclass#readme"
+}
