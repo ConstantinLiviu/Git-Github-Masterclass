@@ -7,10 +7,10 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: npm Install
+          command: npm install
       - run:
           name: Run automated tests
-          command: npm tests
+          command: npm test
 
 workflows:
   sample:
