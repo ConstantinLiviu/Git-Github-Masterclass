@@ -1,0 +1,21 @@
+********************************************************************
+69. What is Continuous Integration?
+
+CI - devs frequently merge their code into a central repository where automated builds and tests are run 
+CI rules:
+ - maintain a single source repository;
+ - automate the build;
+ - make the build faster;
+ - test in a clone of the production environment;
+********************************************************************
+70. What is Continuous Delivery?
+
+CD - ensures that code is always in a ready to deploy state.
+CD Pipeline:
+ - CI Stage: code is commited, built and unit-tested
+ - Staging: build deployed to a replica
+ - Manual approval/Deployment
+ - Production: code pushed to prod
+********************************************************************
+
+To implement course instructions I created a test and applied it to the script.js file in Section 6. The package.json is in the root, and the test file is logic.test.js in Section 6. I also changed the index.html script tag and added the "module" type to allow the process to be run.
