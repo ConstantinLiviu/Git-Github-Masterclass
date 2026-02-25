@@ -12,7 +12,33 @@ jobs:
           name: Run automated tests
           command: npm test
 
+deploy:
+  docker:
+    - image: cimg/node:20.0
+  steps:
+    - checkout
+    - add_ssh_keys:
+        fingerprints:
+          - SHA256:02k7igUq9KN6t/dzGPXYAYchpal2zYxz9MCc16+EFVw
+    - run:
+        name: Deploy to GitHub Pages
+        command: |
+          git config --global user.email "$GH_EMAIL"
+          git config --global user.name "$GH_NAME"
+
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+          npx gh-pages -d . -m "Automated Deploy by CircleCI[skip ci]"
+
 workflows:
   sample:
     jobs:
       - build_and_test
+      - deploy:
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only:
+                - master
+                - cd-setup

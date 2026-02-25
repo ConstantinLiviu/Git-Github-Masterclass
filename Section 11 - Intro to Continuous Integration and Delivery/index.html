@@ -4,33 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="/Section 02 - Getting Started with Github/css/styles.css"
-    />
+    <title>CI/CD</title>
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/dictando.css" />
   </head>
   <body>
-    <h1 class="container">Hello Git World!</h1>
-
-    <div>
-      <p>Working with git is easy!</p>
-    </div>
-
-    <h2>Author: myself!</h2>
-
-    <div>
-      <p>Taking a look at commit shas!</p>
-    </div>
-
-    <div>
-      <p>Added from GitHub!</p>
-    </div>
-
-    <!-- Some comment -->
-
+    <h1 class="container">CI/CD</h1>
     <section id="notes-viewer" class="max-w-4xl mx-auto mt-8 px-4">
       <div class="flex items-center justify-between mb-4 text-slate-500">
         <div class="flex items-center gap-2">
@@ -85,7 +64,7 @@
         const display = document.getElementById("notes-content");
         try {
           const response = await fetch(
-            "../Notes/Section 01 - Getting Started with Git.txt",
+            "../Notes/Section 11 - Intro to Continuous Integration and Delivery.txt",
           );
           if (!response.ok) throw new Error("🐶 the dog ate my homework! 😢");
           const text = await response.text();

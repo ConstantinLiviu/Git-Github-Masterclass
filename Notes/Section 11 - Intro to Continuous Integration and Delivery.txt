@@ -19,3 +19,5 @@ CD Pipeline:
 ********************************************************************
 
 To implement course instructions I created a test and applied it to the script.js file in Section 6. The package.json is in the root, and the test file is logic.test.js in Section 6. I also changed the index.html script tag and added the "module" type to allow the process to be run.
+
+To also set up CD, I created a github page to that the repo gets deployed after circleci does the testing and all tests pass.

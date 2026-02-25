@@ -3,9 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markdown</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Documentation Viewer | README.md</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/dictando.css" />
   </head>
-  <body>
-    <h1>Generic title</h1>
+  <body class="py-8 md:py-20 px-4">
+    <main class="max-w-4xl mx-auto">
+      <nav
+        class="flex items-center justify-between mb-8 px-2 text-slate-400 font-medium"
+      >
+        <div class="flex items-center gap-3">
+          <span class="relative flex h-2.5 w-2.5">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+            ></span>
+          </span>
+          <span
+            class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300"
+            >Section 08 / README.md</span
+          >
+        </div>
+        <a
+          href="../index.html"
+          class="text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-all pointer"
+        >
+          Home Dashboard
+        </a>
+      </nav>
+      <article
+        class="document-surface rounded-[2.5rem] shadow-2xl overflow-hidden"
+      >
+        <div
+          id="markdown-content"
+          class="prose prose-invert prose-slate max-w-none p-8 md:p-16 prose-headings:text-white prose-headings:font-black prose-headings:tracking-tighter prose-p:text-white prose-p:leading-relaxed prose-p:opacity-95 prose-strong:text-white prose-strong:font-bold /* STILIZARE COD: Roz/Magenta pentru vizibilitate maximă */ prose-code:text-pink-400 prose-code:bg-pink-500/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none prose-code:font-medium /* BLOCURI DE COD: Simple, fundal închis, text magenta */ prose-pre:bg-slate-900/80 prose-pre:border prose-pre:border-slate-800 prose-pre:text-pink-300 prose-pre:rounded-2xl prose-pre:shadow-inner prose-blockquote:border-l-blue-500 prose-blockquote:bg-blue-500/5 prose-blockquote:text-slate-300 prose-li:text-slate-200"
+        >
+          <p
+            class="text-slate-500 italic animate-pulse flex items-center gap-2"
+          >
+            Loading...
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <script>
+      window.onload = async function () {
+        const contentArea = document.getElementById("markdown-content");
+        try {
+          const response = await fetch("testFile.md");
+          if (!response.ok) throw new Error("🐶 the dog ate my homework! 😢");
+          const rawMarkdown = await response.text();
+
+          // Folosim Marked.js direct, fără configurări extra de highlight
+          contentArea.innerHTML = marked.parse(rawMarkdown);
+        } catch (error) {
+          contentArea.innerHTML = `
+            <div class="py-12 text-center text-red-500 font-bold uppercase tracking-widest text-xs">
+              ${error.message}
+            </div>`;
+        }
+      };
+    </script>
   </body>
 </html>

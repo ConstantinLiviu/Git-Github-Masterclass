@@ -23,6 +23,7 @@ if (typeof document !== "undefined") {
       if (userInput === "" || isNaN(userInput)) {
         alert("Please input a valid integer!");
         inputEl.value = "";
+        rezultatEl.innerText = "";
         return;
       }
       rezultatEl.innerText = `>>> Temperature is ${convertCelsiusToKelvin(userInput)}K ${getEmoji(userInput)} <<<`;

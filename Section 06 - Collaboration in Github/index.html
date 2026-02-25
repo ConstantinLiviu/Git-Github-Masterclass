@@ -1,19 +1,148 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collaboration in Github</title>
+    <!-- Încărcăm Tailwind v4 pentru performanță maximă -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Collaboration in Github | Unit Converter</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/dictando.css" />
   </head>
-  <body>
-    <h1>Hello!</h1>
-    <label for="celsiusInput"
-      >Write the Celsius temperature you want converted and press enter:</label
-    >
-    <br />
-    <input type="number" id="celsiusInput" placeholder="Ex: 25" />
+  <body
+    class="min-h-screen flex flex-col items-center justify-center p-4 md:p-8"
+  >
+    <main class="w-full max-w-lg">
+      <div class="flex items-center justify-between mb-10 px-2">
+        <div class="flex items-center gap-2">
+          <span class="relative flex h-2 w-2">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
+            ></span>
+          </span>
+          <h2
+            class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400"
+          >
+            Course Notes
+          </h2>
+        </div>
+        <a
+          href="../index.html"
+          class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-emerald-400 transition-all"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          Home Dashboard
+        </a>
+      </div>
+      <div
+        class="bg-slate-900/40 border border-slate-800 p-8 md:p-10 rounded-[2.5rem] shadow-2xl backdrop-blur-md"
+      >
+        <header class="mb-10 text-center">
+          <h1
+            class="text-4xl font-black text-white tracking-tighter mb-2 italic"
+          >
+            Unit
+            <span
+              class="text-emerald-500 not-italic font-extrabold tracking-tight"
+              >Converter</span
+            >
+          </h1>
+          <div class="h-1 w-12 bg-emerald-500 mx-auto rounded-full mb-4"></div>
+        </header>
 
-    <h4 id="rezultat"></h4>
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <label
+              for="celsiusInput"
+              class="block text-[10px] font-black uppercase tracking-widest text-slate-500 ml-2"
+            >
+              Write the Celsius temperature you want converted and press enter:
+            </label>
+            <div class="relative">
+              <input
+                type="number"
+                id="celsiusInput"
+                placeholder="Ex: 25"
+                class="w-full bg-slate-950/80 border border-slate-800 rounded-3xl py-5 px-8 text-2xl text-white font-bold outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/5 transition-all placeholder:text-slate-800"
+              />
+              <div
+                class="absolute right-8 top-1/2 -translate-y-1/2 text-slate-700 font-mono font-bold text-lg pointer-events-none group-focus-within:text-emerald-500 transition-colors"
+              >
+                °C
+              </div>
+            </div>
+            <p
+              id="error-msg"
+              class="text-[10px] text-red-400 font-bold uppercase tracking-tighter ml-2 hidden animate-pulse"
+            >
+              ⚠️ Eroare: Vă rugăm introduceți un număr valid!
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="ml-2 mb-2">
+              <span
+                class="text-[9px] font-bold text-slate-500 uppercase tracking-widest"
+                >Calculated Output</span
+              >
+            </div>
+            <div
+              class="bg-slate-950/40 rounded-[2rem] p-8 border border-slate-800/50 flex items-center justify-center min-h-[160px] shadow-inner"
+            >
+              <h4
+                id="rezultat"
+                class="code-font text-base md:text-lg font-medium text-slate-500 text-center leading-relaxed transition-all duration-300"
+              ></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="notes-viewer" class="w-full">
+        <div class="flex items-center gap-2 mb-4 px-2"></div>
+        <div
+          class="dictando-page rounded-2xl overflow-hidden max-h-[500px] overflow-y-auto"
+        >
+          <div id="notes-content" class="dictando-content py-4"></div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      window.onload = async function () {
+        const display = document.getElementById("notes-content");
+        try {
+          const response = await fetch(
+            "../Notes/Section 06 - Collaboration in GitHub.txt",
+          );
+          if (!response.ok) throw new Error("🐶 the dog ate my homework! 😢");
+          const text = await response.text();
+          display.innerText = text;
+        } catch (error) {
+          display.innerText =
+            "❌ I swear it was here! I guess " + error.message;
+        }
+      };
+    </script>
     <script type="module" src="script.js"></script>
   </body>
 </html>
