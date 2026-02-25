@@ -1,0 +1,44 @@
+********************************************************************
+41. Collaboration on Private Repos and cloning to Colab
+
+To add collaborators on your repo, from repo page -> Settings -> collaborators -> add people
+
+Using colab:
+ - to give colab access to your google drive account:
+        from google.colab import drive
+        drive.mount('*address where you want it imported (drive folder by default)')
+
+        %cd to where you want to run your repo/files
+
+ - to clone a repo in colab:
+        !git clone (repo link with credentials in front) https://*username*:{*password*}@github.com/*repo link*
+
+ - set up user.name user.pass/token before commiting/pushing
+********************************************************************
+42. Protecting Branches on GitHub
+
+To protect a branch on GitHub you need to go to Settings -> Branches -> Add branch protection rule -> select branch -> add rules
+
+********************************************************************
+43. Requiring Reviews in Pull Requests
+
+Reviewers - assign someone to review the pull request
+          - can be used by assignee to request a review
+
+Assignees - assign person who submitted the pull request
+
+Labels - assign label for pull request 
+       - edit labels from the fropdown also allows you to edit and create labels
+
+Projects - helps admin/manager see which project the pull   
+           request is a part of
+
+Milestone - used to group tasks, usually displays the stage
+            the project is in (launch date, app version etc.)
+
+Development - the number of the issue being fixed
+
+********************************************************************
+44. Working with Issues and PRs in GitHub
+
+In case of submitting 2 pull requests, if one was already approved and you made changes, for the second update, in the Reviewers menu you can request an additional review

@@ -1,0 +1,75 @@
+********************************************************************
+34. Types of Merges
+
+I. Fast-Forward Merge:
+ - refers to regular merges (git merge);
+ - no merge commits are created and all merges are fast forwarded;
+ - it occurs when there is a linear path from the current branch tip to target branch; instead of mergin branches, all that git has to do to integrate the changes history is to move the current branch tip up to the target branch tip;
+
+ git merge --no-ff <branch-name>
+
+II. Recursive Merge:
+ - a merge will have 2 parents once it's done;
+ - it's used when multiple commits/different branches are pushed to one branch; in such a case there will be changes on one branch that don't show up on a different branch;
+ - a thrid commit is required (not by the programmers) that will attempt to take into account and settle all changes made on both branches in a single commit(the 3rd one);
+ - git searches for a shared commit (by both branches) and will take all new commits and merge them into one (if there are no conflicts);
+
+ git merge -s recursive first-branch second-branch
+
+III. Ours:
+ - user when dealing with a very old branch;
+ - instruct git to simply use the current version (latest) of the branch from that point on;
+
+ git checkout --ours
+ git merge --continue
+
+IV. OCTOPUS:
+ - this type deals with more than two heads being present;
+ - its main use/aim is to bundle the topic brach heads together;
+
+ git merge -s octopus
+
+V. RESOLVE:
+ - built to deal with two heads only (current brach and branch being pulled from);
+ git merge -s resolve
+
+VI. SUBTREE:
+ - ubtree merge is considered the modified version of the recursive merging strategy. Suppose that we have two branches A and B. 
+ - instead of reading the tree structure formed at the same level, B first adjusts to match the structure formed by A. This adjustment is also performed by the ancestor tree structure of the tree.
+
+ git merge -s subtree
+
+********************************************************************
+36. A first Merge Conflict
+
+when on master, you may write 
+git merge <branch name> 
+only; no need to specify destination
+
+how to abort merging 
+git merge --abort
+
+after solving the merge conflict
+git add <file name>
+git commit -m "<commit msg>"
+git branch -d <branch name>
+
+********************************************************************
+40. Adding Tags to the Repository
+ - tags are a reference that point to a specidic point in Git history;
+ - they usually point a marked version release (v1.0);
+ - unlike branches, upon creation, tags don't change and have no further history of commits; (like a branch that doesn't change)
+
+To add a tag:
+git tag -a <tag name> -m "<relevant tag message>"
+
+git show <tag name> -> displays tagger, date, tag message and commit linked to tag
+
+Tags can also be added retroactively:
+git log -> figure out which commit you want to add the tag to;
+git log --pretty=oneline (each commit is displayed on its own line);
+get the first 8 digits of the SHA
+git tag -a <tag name> <first 8 chars of SHA> -m "<relevant tag msg>"
+
+To push tags to remote:
+git push origin --tags

@@ -1,0 +1,79 @@
+********************************************************************
+45. Adding a README file
+
+```displays a block of code```
+[here]() inserts hyperlink
+
+Conventions:
+# Add a header - title
+## ... ###### subheaders
+
+## Instalation guide - main steps and particularities
+
+## Info on how to use the code and any requirements (keys, urls etc.)
+
+## Info on how people can contribute - redirect to a contributing.md
+
+## On github, set topics!
+
+********************************************************************
+46. Adding the important templates
+
+Subject covered on Github; check the docs and .github/ISSUE_TEMPLATE folders in the repository
+
+********************************************************************
+47. Filtering the Git Log to Better Understand the repo
+
+Additional repository exploring as a collaborator:
+git log: displays info about commits/branches
+
+git log --graph: same as above, but with visual queues for forking/mergin branches
+
+git shortlog: get info regarding contributors and their activity
+
+git log --author="*author's name*": retrieve commits added by the author in question
+
+git log --grep=*text*: helps you find a commit based on the commit's comment
+
+git log --since=*start of time interval*: alows you to look up based on when it was commited
+
+>>> --author, --grep and --since can be used at the same time
+
+********************************************************************
+48. The Full Contribution Flow - Beyond Pull Requests
+
+This segment covers cloning, branching, pulling and pushing repos. As this has already been coverd and userd throughout the course, no special project/feature/snippet was created.
+
+Since templates were created, the only difference is filling in the template upon creating a pull request.
+
+********************************************************************
+49. Importance and Naming of Feature Branches
+
+To maintain a working version of the project while continuing to implement features you need to use branches. (feature branches, avoid pushing to master at all costs)
+
+For feature branches, the name should be relevant and have an identifier tying it to the issue.
+
+Feature request: "feature request #1" (issue created on github)
+Branch name: "feature-1"
+
+Bug report: "bug report #345"
+Branch name: "bug-345"
+
+Very urgent bug request: "very urgent bug #1091"
+Branch name: "hotfix-1091"
+
+Bottomline, use the convention set up by the team/repo owner.
+
+If a branch doesn't cover the entire task, you can use this:
+"feature-1/change-color"
+"feature-1/add-margin"
+
+********************************************************************
+50. Importance of Descriptive Commits
+
+Messages ettiquette:
+- limit message to 50 characters(to avoid message being cut); if you use a commit body leave the first line empty;
+- capitalize message;
+- don't end the message with a period ".";
+- use the body to add a message, not the header! aim for less than 72 characters per line;
+- In the body explain what/why has changed;

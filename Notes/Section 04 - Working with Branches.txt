@@ -1,0 +1,45 @@
+********************************************************************
+26. Creating a Branch with Git
+git command
+git branch <branch name>
+
+create/change branch:
+git checkout <branch name> -> change branches
+git checkout -b <branch name> -> create a branch and immediately switch to it
+
+********************************************************************
+29. Adding a gitignore File
+used to ignore files in your repository; while those files exist locally and can be edited and saved, they will not be uploaded to a remote repository when pushing commits; they won't even be committed/added to your local repository
+
+to create a gitignore file, git command:
+touch ".gitignore"
+
+to add files/folders to the gitignore file simply type in the file/folder address
+
+********************************************************************
+30. Syncing branches
+
+push branches -> git push origin <branch name>
+
+git checkout --track origin/<branch name>
+1. create new local branch
+2. checking out into the local branch based on a remote branch
+3. track new branch
+
+********************************************************************
+31. Graph the Branches on the Terminal
+
+git log --graph -> offers a log with a visual aid which tracks branch merges/splits in hte commit history
+
+git log --oneline -n 1 <branch name> 
+check parent commit of a branch
+
+********************************************************************
+32. Merging Branches in the Terminal
+
+git commands:
+switch to parent branch
+git merge <branch you want to merge> <destination branch(parent branch)>
+
+delete branch
+git branch -d <branch-name>

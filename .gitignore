@@ -1,0 +1,4 @@
+Section 04 - Working with Branches/Textfiles/*.txt
+# ignore all files of type .txt in the Textfiles folder
+Section 04 - Working with Branches/credentials.txt
+# ignore specific file
