@@ -1,7 +1,7 @@
 # 🎓 Git & GitHub Masterclass Hub
 
 ### Welcome to my Git & GitHub Masterclass Hub. This repository has evolved from a simple file storage into a professional-grade CI/CD (Continuous Integration / Continuous Deployment) infrastructure.
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/ConstantinLiviu/Git-Github-Masterclass/tree/gh-pages.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/ConstantinLiviu/Git-Github-Masterclass/tree/gh-pages)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/ConstantinLiviu/Git-Github-Masterclass/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/ConstantinLiviu/Git-Github-Masterclass/tree/master)
 ![GitHub Release](https://img.shields.io/github/v/release/ConstantinLiviu/Git-Github-Masterclass)
 
 ### 🏗️ Project Architecture
